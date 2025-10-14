@@ -1,0 +1,12 @@
+{
+  "name": "test-task-actionplan",
+  "version": "1.0.0",
+  "description": "A component for displaying and filtering project participants using TanStack Query",
+  "license": "ISC",
+  "author": "Aleksandr Krivoshein",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
