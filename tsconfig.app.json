@@ -18,7 +18,7 @@
       "@app-types/*": ["src/types/*"],
       "@utils/*": ["src/utils/*"],
     },
-    "baseUrl": "/",
+    "baseUrl": "./",
 
 
     /* Bundler mode */
@@ -34,7 +34,7 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
+    "erasableSyntaxOnly": false,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
     "noImplicitAny": true
