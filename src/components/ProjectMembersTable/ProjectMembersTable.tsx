@@ -11,7 +11,7 @@ import {
   Paper
 } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
-import { theme } from '@styles/theme';
+import { table } from '@styles/table';
 
 import React from 'react';
 
@@ -21,13 +21,13 @@ interface ProjectMembersTableProps {
 
 export const ProjectMembersTable: React.FC<ProjectMembersTableProps> = ({ members }) => {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={table}>
       <Box component={Paper} elevation={2}>
         <TableContainer>
           <Table>
             <TableHead>
               <TableRow>
-                <TableCell>Avatar</TableCell>
+                <TableCell>Аватар</TableCell>
                 <TableCell>Имя</TableCell>
                 <TableCell>Email</TableCell>
                 <TableCell>Роль</TableCell>
@@ -49,9 +49,7 @@ export const ProjectMembersTable: React.FC<ProjectMembersTableProps> = ({ member
 
               {members.length === 0 && (
                 <TableRow>
-                  <TableCell colSpan={5} align="center">
-                    Ничего не найдено
-                  </TableCell>
+                  <TableCell sx={{ colSpan: 5, align: 'center' }}>Ничего не найдено</TableCell>
                 </TableRow>
               )}
             </TableBody>

@@ -4,7 +4,6 @@ import { defineConfig } from 'vite';
 
 const aliasList = [
   'app',
-  'assets',
   'components',
   'config',
   'lib',

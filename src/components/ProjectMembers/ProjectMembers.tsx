@@ -45,7 +45,7 @@ export const ProjectMembers: FC = () => {
       }}
     >
       {isLoading && (
-        <Box display="flex" justifyContent="center" mt={4}>
+        <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: 4 }}>
           <CircularProgress />
         </Box>
       )}

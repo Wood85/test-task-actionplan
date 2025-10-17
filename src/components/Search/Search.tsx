@@ -34,9 +34,9 @@ export const Search: React.FC<SearchProps> = ({ onSearch }) => {
   };
 
   return (
-    <Box display="flex" flexDirection="column" gap={1} alignItems="flex-start">
+    <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1, alignItems: 'flex-start' }}>
       <Typography>Поиск</Typography>
-      <Box display="flex" alignItems="center" gap={2} flexWrap="wrap">
+      <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2, alignItems: 'center' }}>
         <FormControl size="small">
           <Select
             value={field}

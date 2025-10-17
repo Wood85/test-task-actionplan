@@ -9,7 +9,7 @@ interface PaginationControlProps {
 
 export const PaginationControl: React.FC<PaginationControlProps> = ({ count, page, onChange }) => {
   return (
-    <Box display="flex" justifyContent="center" mt={2}>
+    <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: 2 }}>
       <Pagination
         count={count}
         page={page}
