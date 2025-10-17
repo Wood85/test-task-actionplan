@@ -11,8 +11,7 @@ const aliasList = [
   'styles',
   'services',
   'app-types',
-  'utils',
-  'app'
+  'utils'
 ];
 
 const alias = aliasList.reduce(
