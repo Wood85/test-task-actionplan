@@ -1,4 +1,6 @@
-export type Role = 'Admin' | 'Manager' | 'Developer' | 'Designer';
+import { roles } from '@config/constants';
+
+export type Role = (typeof roles)[number];
 
 export type Status = 'Active' | 'Inactive' | 'Pending';
 

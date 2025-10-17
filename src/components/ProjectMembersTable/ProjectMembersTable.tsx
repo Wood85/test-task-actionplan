@@ -12,34 +12,11 @@ import {
 } from '@mui/material';
 import React from 'react';
 
-const mockData: Member[] = [
-  {
-    id: 1,
-    avatar: 'https://avatar.iran.liara.run/public',
-    name: 'Aleksandr',
-    email: 'aleksandr@mail.com',
-    role: 'Admin',
-    status: 'Active'
-  },
-  {
-    id: 2,
-    avatar: 'https://avatar.iran.liara.run/public/boy',
-    name: 'Nikita',
-    email: 'nikita@mail.com',
-    role: 'Developer',
-    status: 'Active'
-  },
-  {
-    id: 3,
-    avatar: 'https://avatar.iran.liara.run/public/girl',
-    name: 'John',
-    email: 'john@mail.com',
-    role: 'Designer',
-    status: 'Inactive'
-  }
-];
+interface ProjectMembersTableProps {
+  members: Member[];
+}
 
-export const ProjectMembersTable: React.FC = () => {
+export const ProjectMembersTable: React.FC<ProjectMembersTableProps> = ({ members }) => {
   return (
     <Box component={Paper} elevation={2}>
       <TableContainer>
@@ -54,7 +31,7 @@ export const ProjectMembersTable: React.FC = () => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {mockData.map((member) => (
+            {members.map((member) => (
               <TableRow key={member.id}>
                 <TableCell>
                   <Avatar src={member.avatar} alt={member.name} />
@@ -65,6 +42,14 @@ export const ProjectMembersTable: React.FC = () => {
                 <TableCell>{member.status}</TableCell>
               </TableRow>
             ))}
+
+            {members.length === 0 && (
+              <TableRow>
+                <TableCell colSpan={5} align="center">
+                  Ничего не найдено
+                </TableCell>
+              </TableRow>
+            )}
           </TableBody>
         </Table>
       </TableContainer>

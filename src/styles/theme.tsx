@@ -10,7 +10,8 @@ export const theme = createTheme({
         },
         body: {
           fontSize: 14,
-          fontWeight: 600
+          fontWeight: 600,
+          padding: '8px 16px'
         }
       }
     }
