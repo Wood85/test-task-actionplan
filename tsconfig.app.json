@@ -9,12 +9,11 @@
     "skipLibCheck": true,
     "paths": {
       "@app/*": ["src/app/*"],
-      "@assets/*": ["src/assets/*"],
       "@components/*": ["src/components/*"],
       "@config/*": ["src/config/*"],
       "@lib/*": ["src/lib/*"],
       "@styles/*": ["src/styles/*"],
-      "services/*": ["src/services/*"],
+      "@services/*": ["src/services/*"],
       "@app-types/*": ["src/types/*"],
       "@utils/*": ["src/utils/*"],
     },

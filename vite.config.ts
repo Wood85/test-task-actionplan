@@ -4,15 +4,13 @@ import { defineConfig } from 'vite';
 
 const aliasList = [
   'app',
-  'assets',
   'components',
   'config',
   'lib',
   'styles',
   'services',
   'app-types',
-  'utils',
-  'app'
+  'utils'
 ];
 
 const alias = aliasList.reduce(

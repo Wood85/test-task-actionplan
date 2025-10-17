@@ -1,41 +1,20 @@
 import AddIcon from '@mui/icons-material/Add';
-import { Button, Tooltip } from '@mui/material';
-import type { ButtonProps } from '@mui/material';
+import { Button } from '@mui/material';
 import React from 'react';
 
-interface AddParticipantButtonProps extends Omit<ButtonProps, 'onClick'> {
+interface CustomButtonProps {
   onClick?: () => void;
-  label?: string;
+  children?: React.ReactNode;
 }
 
-export const CustomButton: React.FC<AddParticipantButtonProps> = ({
-  onClick,
-  label = 'Добавить участника',
-  disabled = false,
-  ...rest
-}) => {
-  return (
-    <Tooltip title={label}>
-      <span>
-        <Button
-          variant="contained"
-          color="primary"
-          startIcon={<AddIcon />}
-          onClick={onClick}
-          disabled={disabled}
-          {...rest}
-          sx={{
-            textTransform: 'none',
-            borderRadius: 2,
-            px: 2.5,
-            py: 1,
-            ...rest.sx
-          }}
-          aria-label={label}
-        >
-          {label}
-        </Button>
-      </span>
-    </Tooltip>
-  );
-};
+export const CustomButton: React.FC<CustomButtonProps> = ({ onClick, children }) => (
+  <Button
+    variant="contained"
+    color="primary"
+    startIcon={<AddIcon />}
+    onClick={onClick}
+    sx={{ borderRadius: 2, textTransform: 'none' }}
+  >
+    {children}
+  </Button>
+);
